@@ -35,13 +35,13 @@ var authorRating: Dictionary<String, Float> = ["Mark Twain":8.9, "Nathaniel Hawt
 print(authorRating["John Steinbeck"]!)
 authorRating["Erik Larson"] = 9.2
 
-/*
- if(authorRating["Mark Twain"] > authorRating["Jon Krakaur"]){
+
+ if(authorRating["Mark Twain"]! > authorRating["Jon Krakaur"]!){
     print("Mark Twain")
 }else{
     print("Jon Krakaur")
 }
- */
+ 
 
 //:problem 7
 for(author, rating) in authorRating{

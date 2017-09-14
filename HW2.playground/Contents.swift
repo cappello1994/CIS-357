@@ -28,6 +28,7 @@ else if (averageRating >= 7 ){
 }
 
 
+
 //Problem 4
 func verbalizeNumber(count: Int) -> String{
 	
@@ -49,18 +50,18 @@ func verbalizeNumber(count: Int) -> String{
 		case let x where x > 999999:
 			strOut = "millions of"
 		default:
-			strOut = "error method"
+			strOut = "error"
 	}
 	
-	return strOut
+	return "There are \(strOut) pandas"
 }
 
 
 
 //Problem 5
-for var index in 0...100{
-	print("There are " + verbalizeNumber(count: index) + " pandas\n")
-	index*=10
+for var i in 0...100{
+	print(verbalizeNumber(count: i))
+	i*=10
 }
 
 
@@ -71,11 +72,13 @@ func verbalizeAndShoutNumber( num:Int ) -> String{
 	return strOut
 }
 
+
+
 //Problem 7
 func expressNumbersElegantly(max: Int, verbalizeFunction: (Int) -> String ) -> String{
 	var strOut = ""
 	for index in 1...max{
-		strOut += "\(verbalizeFunction(index))"
+		strOut += "\(verbalizeFunction(index))\n"
 	}
 	
 	return strOut
@@ -83,13 +86,45 @@ func expressNumbersElegantly(max: Int, verbalizeFunction: (Int) -> String ) -> S
 
 var verbalizeWrapper: (Int) -> String = verbalizeNumber
 
-expressNumbersElegantly( max: 5, verbalizeFunction: verbalizeWrapper )
+print(expressNumbersElegantly( max: 5, verbalizeFunction: verbalizeWrapper ))
 
 verbalizeWrapper = verbalizeAndShoutNumber
 
-expressNumbersElegantly( max: 5, verbalizeFunction: verbalizeWrapper )
+print(expressNumbersElegantly( max: 5, verbalizeFunction: verbalizeWrapper ))
+
+
+
+//Problem 8
+func expressNumbersVeryElegantly(numOfPrints max: Int, stringBuilder verbalizeFunction: (Int) -> String ) -> String{
+	var strOut = ""
+	for index in 1...max{
+		strOut += "\(verbalizeFunction(index))\n"
+	}
+	
+	return strOut
+}
 
 
 
 //Problem 9
 var famousLastWords = ["the cow jumped over the moon.", "three score and four years ago", "lets nuc 'em Joe!", "ah, there is just something about Swift"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

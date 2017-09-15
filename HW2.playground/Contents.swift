@@ -110,21 +110,4 @@ func expressNumbersVeryElegantly(numOfPrints max: Int, stringBuilder verbalizeFu
 var famousLastWords = ["the cow jumped over the moon.", "three score and four years ago", "lets nuc 'em Joe!", "ah, there is just something about Swift"]
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print("\(famousLastWords.map( { (s: String) -> String in return "\(s[s.startIndex])".uppercased() + "\(s[s.index(s.startIndex, offsetBy: 1)..<s.endIndex])" } ) )" )

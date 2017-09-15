@@ -111,3 +111,24 @@ var famousLastWords = ["the cow jumped over the moon.", "three score and four ye
 
 
 print("\(famousLastWords.map( { (s: String) -> String in return "\(s[s.startIndex])".uppercased() + "\(s[s.index(s.startIndex, offsetBy: 1)..<s.endIndex])" } ) )" )
+
+			     
+//Problem 10			     
+func batman(n: Int) -> String {
+    //this switch statement is pretty cool... The internet helped with that one.
+    switch (n % 15 == 0, n % 15 == 1, n == 1) {
+    case (true, false, false):
+        return "Batman"
+    case (false, true, false):
+        return "!"
+    case (true, true, false):
+        return "Batman!"
+    default:
+        return "Na"
+    }
+}
+
+for index in 1...100{
+    print(batman(n: index))
+}			     
+			   

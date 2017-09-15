@@ -115,7 +115,6 @@ print("\(famousLastWords.map( { (s: String) -> String in return "\(s[s.startInde
 			     
 //Problem 10			     
 func batman(n: Int) -> String {
-    //this switch statement is pretty cool... The internet helped with that one.
     switch (n % 15 == 0, n % 15 == 1, n == 1) {
     case (true, false, false):
         return "Batman"

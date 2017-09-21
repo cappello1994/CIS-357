@@ -1,0 +1,43 @@
+body{
+    font-family: Times;
+    font-size: medium;
+    font-color:black;
+}
+
+img.me {
+    float: right;
+    width: 20%;
+    height: 20%;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+#Chance{
+    height: 110px;
+    width: 110px;
+    horiz-align: center;
+}
+td{
+    width: 50%;
+}
+table#courseTable{
+    border: solid;
+}
+table p{
+    font-size: small;
+}
+
+.best{
+    font-style: italic;
+}
+
+#courseTable tr:nth-child(even){
+    background-color: plum;
+}
+
+#courseTable tr:nth-child(odd){
+    background-color: lavender;
+}
+
+#courseTable tr td:nth-child(odd){
+    text-align: center;
+}

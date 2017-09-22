@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var longitudeField1: UITextField!
     
     @IBOutlet weak var longitudeField2: UITextField!
+    @IBOutlet weak var distanceResultField: UITextField!
+    @IBOutlet weak var bearingResultField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,13 +31,16 @@ class ViewController: UIViewController {
         self.latitudeField2.text = ""
         self.longitudeField1.text = ""
         self.longitudeField2.text = ""
+        self.distanceResultField.text = ""
+        self.bearingResultField.text = ""
     }
     
     @IBAction func calculateButtonPressed(_ sender: UIButton) {
         print("Calculating")
         if let lat1 = self.latitudeField1.text{
             if lat1 != ""{
-                print("Text received: \(lat1)")
+                self.distanceResultField.text = "Result"
+                self.bearingResultField.text = "Result"
             }
             
             else{

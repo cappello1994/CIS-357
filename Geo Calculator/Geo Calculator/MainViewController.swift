@@ -8,7 +8,8 @@
 
 import UIKit
 import Foundation
-class MainViewController: UIViewController {
+
+class MainViewController: UIViewController, SettingsViewContollerDelegate {
     
     //var String: userLat1
     
@@ -108,16 +109,22 @@ class MainViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segueToSettings" {
-            if let destVC = segue.destination.childViewControllers[0] as? SettingsViewController{
-                destVC.userLat1 = self.latitudeField1.text
-            }
-        }
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func settingsChanged(distanceUnits: String, bearingUnits: String) {
+        self.distanceResultField.text = distanceUnits
+        self.bearingResultField.text = bearingUnits
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToSettings" {
+            if let dest = segue.destination as? SettingsViewController {
+                dest.delegate = self
+            }
+        }
     }
 
 

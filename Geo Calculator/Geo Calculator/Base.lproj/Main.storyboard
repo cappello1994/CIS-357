@@ -143,6 +143,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MV3-ND-34i">
+                                <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -152,8 +156,15 @@
                                 <action selector="cancelButtonPressed:" destination="kjg-g3-Aef" id="qzl-Bk-qpy"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="RhX-48-wHA"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="RhX-48-wHA">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="kjg-g3-Aef" id="hL9-AM-d3j"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="unitPicker" destination="MV3-ND-34i" id="HfI-Px-Cey"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SfT-Ez-5yY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

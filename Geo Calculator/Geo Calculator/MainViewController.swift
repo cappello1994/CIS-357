@@ -8,8 +8,10 @@
 
 import UIKit
 import Foundation
-class ViewController: UIViewController {
-
+class MainViewController: UIViewController {
+    
+    //var String: userLat1
+    
     @IBOutlet weak var latitudeField1: UITextField!
     
     @IBOutlet weak var latitudeField2: UITextField!
@@ -105,7 +107,14 @@ class ViewController: UIViewController {
     func dismissKeyboard() {
         self.view.endEditing(true)
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToSettings" {
+            if let destVC = segue.destination.childViewControllers[0] as? SettingsViewController{
+                destVC.userLat1 = self.latitudeField1.text
+            }
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -114,7 +123,7 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController : UITextFieldDelegate {
+extension MainViewController : UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if( textField == self.latitudeField1 ){
             self.longitudeField1.becomeFirstResponder()

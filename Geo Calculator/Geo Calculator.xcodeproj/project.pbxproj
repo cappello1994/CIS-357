@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		3321E6381F72C3260013E37C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3321E6371F72C3260013E37C /* AppDelegate.swift */; };
-		3321E63A1F72C3260013E37C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3321E6391F72C3260013E37C /* ViewController.swift */; };
+		3321E63A1F72C3260013E37C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3321E6391F72C3260013E37C /* MainViewController.swift */; };
 		3321E63D1F72C3260013E37C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3321E63B1F72C3260013E37C /* Main.storyboard */; };
 		3321E63F1F72C3260013E37C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3321E63E1F72C3260013E37C /* Assets.xcassets */; };
 		3321E6421F72C3260013E37C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3321E6401F72C3260013E37C /* LaunchScreen.storyboard */; };
 		3321E64D1F72C3260013E37C /* Geo_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3321E64C1F72C3260013E37C /* Geo_CalculatorTests.swift */; };
 		3321E6581F72C3260013E37C /* Geo_CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3321E6571F72C3260013E37C /* Geo_CalculatorUITests.swift */; };
+		33BCCC081F78321700AE777D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BCCC071F78321700AE777D /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		3321E6341F72C3260013E37C /* Geo Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Geo Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3321E6371F72C3260013E37C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3321E6391F72C3260013E37C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3321E6391F72C3260013E37C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3321E63C1F72C3260013E37C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3321E63E1F72C3260013E37C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3321E6411F72C3260013E37C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		3321E6531F72C3260013E37C /* Geo CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Geo CalculatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3321E6571F72C3260013E37C /* Geo_CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geo_CalculatorUITests.swift; sourceTree = "<group>"; };
 		3321E6591F72C3260013E37C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33BCCC071F78321700AE777D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +100,9 @@
 			isa = PBXGroup;
 			children = (
 				3321E6371F72C3260013E37C /* AppDelegate.swift */,
-				3321E6391F72C3260013E37C /* ViewController.swift */,
+				3321E6391F72C3260013E37C /* MainViewController.swift */,
 				3321E63B1F72C3260013E37C /* Main.storyboard */,
+				33BCCC071F78321700AE777D /* SettingsViewController.swift */,
 				3321E63E1F72C3260013E37C /* Assets.xcassets */,
 				3321E6401F72C3260013E37C /* LaunchScreen.storyboard */,
 				3321E6431F72C3260013E37C /* Info.plist */,
@@ -259,8 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3321E63A1F72C3260013E37C /* ViewController.swift in Sources */,
+				3321E63A1F72C3260013E37C /* MainViewController.swift in Sources */,
 				3321E6381F72C3260013E37C /* AppDelegate.swift in Sources */,
+				33BCCC081F78321700AE777D /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +509,7 @@
 				3321E65E1F72C3260013E37C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3321E65F1F72C3260013E37C /* Build configuration list for PBXNativeTarget "Geo CalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +518,7 @@
 				3321E6611F72C3260013E37C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3321E6621F72C3260013E37C /* Build configuration list for PBXNativeTarget "Geo CalculatorUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +527,7 @@
 				3321E6641F72C3260013E37C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

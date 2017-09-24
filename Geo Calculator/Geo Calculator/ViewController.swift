@@ -19,11 +19,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var longitudeField2: UITextField!
     @IBOutlet weak var distanceResultField: UITextField!
     @IBOutlet weak var bearingResultField: UITextField!
+    @IBOutlet weak var calculateButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let detectTouch = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        
         self.view.addGestureRecognizer(detectTouch)
+        self.latitudeField1.delegate = self
+        self.longitudeField1.delegate = self
+        self.latitudeField2.delegate = self
+        //self.calculateButton.delegate  = self
         
     }
     
@@ -39,8 +45,9 @@ class ViewController: UIViewController {
     
     @IBAction func calculateButtonPressed(_ sender: UIButton) {
         print("Calculating")
-        calculateDistance()
-        calculateBearing()
+        self.dismissKeyboard()
+        self.calculateDistance()
+        self.calculateBearing()
     }
     
     func calculateDistance(){
@@ -87,7 +94,7 @@ class ViewController: UIViewController {
                 
                 let z = atan2(y,x) * (180/Double.pi)
                 
-                let bearing = round( 100 * z ) / 100 
+                let bearing = round( 100 * z ) / 100
                 self.bearingResultField.text = "\(bearing) deg"
                 
                 
@@ -105,5 +112,27 @@ class ViewController: UIViewController {
     }
 
 
+}
+
+extension ViewController : UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if( textField == self.latitudeField1 ){
+            self.longitudeField1.becomeFirstResponder()
+        }
+        
+        else if( textField == self.longitudeField1 ){
+            self.latitudeField2.becomeFirstResponder()
+        }
+        
+        else if( textField == self.latitudeField2 ){
+            self.longitudeField2.becomeFirstResponder()
+        }
+        
+        else{
+            self.calculateButton.becomeFirstResponder()
+        }
+        
+        return true
+    }
 }
 

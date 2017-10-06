@@ -38,7 +38,7 @@
         android:layout_marginStart="33dp"
         android:width="250px"
         android:padding="15px"
-        android:text="TextView" />
+        android:text="@string/distanceLabel" />
 
     <TextView
         android:id="@+id/bearingTextView"
@@ -48,5 +48,5 @@
         android:layout_alignEnd="@+id/distanceTextView"
         android:width="250px"
         android:padding="15px"
-        android:text="TextView" />
+        android:text="@string/bearingLabel" />
 </RelativeLayout>

@@ -17,44 +17,48 @@
         android:width="325px"
         android:ems="10"
         android:inputType="numberSigned|numberDecimal"
-        android:paddingBottom="8px" />
+        android:paddingBottom="8px"
+        android:text="@string/latp1" />
 
     <EditText
         android:id="@+id/longp1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/latp1"
+        android:layout_alignBottom="@+id/latp1"
+        android:layout_alignStart="@+id/longp2"
         android:width="325px"
         android:ems="10"
         android:inputType="numberSigned|numberDecimal"
         android:paddingBottom="8px"
-        android:layout_alignBaseline="@+id/latp1"
-        android:layout_alignBottom="@+id/latp1"
-        android:layout_alignStart="@+id/longp2" />
+        android:text="@string/longp1" />
 
     <EditText
         android:id="@+id/latp2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/latp1"
+        android:layout_below="@+id/longp1"
         android:layout_marginTop="46dp"
         android:width="325px"
         android:ems="10"
         android:inputType="numberSigned|numberDecimal"
         android:paddingBottom="8px"
-        android:layout_below="@+id/longp1"
-        android:layout_alignStart="@+id/latp1" />
+        android:text="@string/latp2" />
 
     <EditText
         android:id="@+id/longp2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/latp2"
+        android:layout_alignBottom="@+id/latp2"
         android:layout_marginStart="17dp"
+        android:layout_toEndOf="@+id/latp2"
         android:width="325px"
         android:ems="10"
         android:inputType="numberSigned|numberDecimal"
         android:paddingBottom="8px"
-        android:layout_alignBaseline="@+id/latp2"
-        android:layout_alignBottom="@+id/latp2"
-        android:layout_toEndOf="@+id/latp2" />
+        android:text="@string/longp2" />
 
     <Button
         android:id="@+id/calcButton"
@@ -63,7 +67,7 @@
         android:layout_alignStart="@+id/latp2"
         android:layout_below="@+id/latp2"
         android:layout_marginTop="31dp"
-        android:text="Button" />
+        android:text="@string/calcButton" />
 
     <Button
         android:id="@+id/clearButton"
@@ -71,7 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/calcButton"
         android:layout_centerHorizontal="true"
-        android:text="Button" />
+        android:text="@string/clearButton" />
 
     <TextView
         android:id="@+id/distanceLabel"
@@ -81,7 +85,7 @@
         android:layout_below="@+id/calcButton"
         android:layout_marginTop="15px"
         android:padding="15px"
-        android:text="TextView" />
+        android:text="@string/distanceLabel" />
 
     <TextView
         android:id="@+id/bearingLabel"
@@ -91,7 +95,7 @@
         android:layout_below="@+id/distanceLabel"
         android:layout_marginTop="15px"
         android:padding="15px"
-        android:text="TextView" />
+        android:text="@string/bearingLabel" />
 
     <TextView
         android:id="@+id/distanceCalc"
@@ -121,6 +125,6 @@
         android:layout_alignEnd="@+id/longp1"
         android:height="10px"
         android:padding="5px"
-        android:text="Button" />
+        android:text="Settings" />
 
 </RelativeLayout>

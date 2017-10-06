@@ -4,6 +4,11 @@
     <string name="longp1">Enter Longitude for p1</string>
     <string name="latp2">Enter Latitude for p2</string>
     <string name="longp2">Enter Longitude for p2</string>
+    <string name="settingsButton">Settings</string>
+    <string name="calcButton">Calculate</string>
+    <string name="clearButton">Clear</string>
+    <string name="distanceLabel">Distance: </string>
+    <string name="bearingLabel">Label: </string>
     <string name="title_activity_settings">SettingsActivity</string>
     <string-array name="distance">
         <item>miles</item>

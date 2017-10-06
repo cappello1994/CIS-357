@@ -16,9 +16,9 @@
         android:layout_marginTop="50dp"
         android:width="325px"
         android:ems="10"
+        android:hint="@string/latp1"
         android:inputType="numberSigned|numberDecimal"
-        android:paddingBottom="8px"
-        android:text="@string/latp1" />
+        android:paddingBottom="8px" />
 
     <EditText
         android:id="@+id/longp1"
@@ -29,9 +29,9 @@
         android:layout_alignStart="@+id/longp2"
         android:width="325px"
         android:ems="10"
+        android:hint="@string/longp1"
         android:inputType="numberSigned|numberDecimal"
-        android:paddingBottom="8px"
-        android:text="@string/longp1" />
+        android:paddingBottom="8px" />
 
     <EditText
         android:id="@+id/latp2"
@@ -42,9 +42,9 @@
         android:layout_marginTop="46dp"
         android:width="325px"
         android:ems="10"
+        android:hint="@string/latp2"
         android:inputType="numberSigned|numberDecimal"
-        android:paddingBottom="8px"
-        android:text="@string/latp2" />
+        android:paddingBottom="8px" />
 
     <EditText
         android:id="@+id/longp2"
@@ -56,9 +56,9 @@
         android:layout_toEndOf="@+id/latp2"
         android:width="325px"
         android:ems="10"
+        android:hint="@string/longp2"
         android:inputType="numberSigned|numberDecimal"
-        android:paddingBottom="8px"
-        android:text="@string/longp2" />
+        android:paddingBottom="8px" />
 
     <Button
         android:id="@+id/calcButton"
@@ -104,8 +104,7 @@
         android:layout_alignTop="@+id/distanceLabel"
         android:layout_toEndOf="@+id/calcButton"
         android:width="400px"
-        android:padding="15px"
-        android:text="TextView" />
+        android:padding="15px" />
 
     <TextView
         android:id="@+id/bearingCalc"
@@ -114,8 +113,7 @@
         android:layout_alignStart="@+id/distanceCalc"
         android:layout_alignTop="@+id/bearingLabel"
         android:width="400px"
-        android:padding="15px"
-        android:text="TextView" />
+        android:padding="15px" />
 
     <Button
         android:id="@+id/settingsButton"

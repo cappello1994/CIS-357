@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.steph.geocalculator.Calculator">
+
+    <EditText
+        android:id="@+id/latp1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="50dp"
+        android:width="325px"
+        android:ems="10"
+        android:inputType="numberSigned|numberDecimal"
+        android:paddingBottom="8px" />
+
+    <EditText
+        android:id="@+id/longp1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="325px"
+        android:ems="10"
+        android:inputType="numberSigned|numberDecimal"
+        android:paddingBottom="8px"
+        android:layout_alignBaseline="@+id/latp1"
+        android:layout_alignBottom="@+id/latp1"
+        android:layout_alignStart="@+id/longp2" />
+
+    <EditText
+        android:id="@+id/latp2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:width="325px"
+        android:ems="10"
+        android:inputType="numberSigned|numberDecimal"
+        android:paddingBottom="8px"
+        android:layout_below="@+id/longp1"
+        android:layout_alignStart="@+id/latp1" />
+
+    <EditText
+        android:id="@+id/longp2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:width="325px"
+        android:ems="10"
+        android:inputType="numberSigned|numberDecimal"
+        android:paddingBottom="8px"
+        android:layout_alignBaseline="@+id/latp2"
+        android:layout_alignBottom="@+id/latp2"
+        android:layout_toEndOf="@+id/latp2" />
+
+    <Button
+        android:id="@+id/calcButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/latp2"
+        android:layout_below="@+id/latp2"
+        android:layout_marginTop="31dp"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/calcButton"
+        android:layout_centerHorizontal="true"
+        android:text="Button" />
+
+    <TextView
+        android:id="@+id/distanceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/calcButton"
+        android:layout_below="@+id/calcButton"
+        android:layout_marginTop="15px"
+        android:padding="15px"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/bearingLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/distanceLabel"
+        android:layout_below="@+id/distanceLabel"
+        android:layout_marginTop="15px"
+        android:padding="15px"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/distanceCalc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/distanceLabel"
+        android:layout_toEndOf="@+id/calcButton"
+        android:width="400px"
+        android:padding="15px"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/bearingCalc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/distanceCalc"
+        android:layout_alignTop="@+id/bearingLabel"
+        android:width="400px"
+        android:padding="15px"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/settingsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/longp1"
+        android:layout_alignEnd="@+id/longp1"
+        android:height="10px"
+        android:padding="5px"
+        android:text="Button" />
+
+</RelativeLayout>

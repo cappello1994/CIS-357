@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Geocalculator</string>
+    <string name="latp1">Enter Latitude for p1</string>
+    <string name="longp1">Enter Longitude for p1</string>
+    <string name="latp2">Enter Latitude for p2</string>
+    <string name="longp2">Enter Longitude for p2</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string-array name="distance">
+        <item>miles</item>
+        <item>km</item>
+    </string-array>
+    <string-array name="bearing">
+        <item>degrees</item>
+        <item>radians</item>
+    </string-array>
+</resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.steph.geocalculator.SettingsActivity"
+    tools:showIn="@layout/activity_settings">
+
+    <Spinner
+        android:id="@+id/distanceSpinner"
+        android:layout_width="194dp"
+        android:layout_height="21dp"
+        tools:layout_editor_absoluteX="182dp"
+        tools:layout_editor_absoluteY="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/bearingSpinner"
+        android:layout_marginTop="30dp" />
+
+    <Spinner
+        android:id="@+id/bearingSpinner"
+        android:layout_width="192dp"
+        android:layout_height="27dp"
+        tools:layout_editor_absoluteY="68dp"
+        tools:layout_editor_absoluteX="184dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/distanceSpinner"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/distanceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/distanceSpinner"
+        android:layout_marginStart="33dp"
+        android:width="250px"
+        android:padding="15px"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/bearingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/bearingSpinner"
+        android:layout_alignEnd="@+id/distanceTextView"
+        android:width="250px"
+        android:padding="15px"
+        android:text="TextView" />
+</RelativeLayout>

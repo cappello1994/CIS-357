@@ -82,9 +82,11 @@ public class Calculator extends AppCompatActivity {
             double bearingRadians = Math.toRadians(bearingDegrees);
             double roundRadians = Math.round(bearingRadians*100)/100;
             double roundDegrees = Math.round(bearingDegrees*100)/100;
-
-            bearingCalc.setText(String.valueOf(roundDegrees));
-
+            if(bM == "degrees") {
+                bearingCalc.setText(String.valueOf(roundDegrees));
+            }else{
+                bearingCalc.setText(String.valueOf(roundRadians));
+            }
         });
 
 

@@ -51,7 +51,9 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/p1Lat" />
+        app:layout_constraintTop_toBottomOf="@+id/p1Lat"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp" />
 
     <EditText
         android:id="@+id/p2Lng"
@@ -65,7 +67,9 @@
         android:layout_marginRight="16dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/p1Lng" />
+        app:layout_constraintTop_toBottomOf="@+id/p1Lng"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp" />
 
     <Button
         android:text="Calculate"
@@ -74,7 +78,6 @@
         android:id="@+id/calc"
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/p2Lat"
-        android:layout_marginLeft="0dp"
         app:layout_constraintLeft_toLeftOf="@+id/p1Lat" />
 
     <Button
@@ -84,15 +87,12 @@
         android:id="@+id/clear"
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/p2Lng"
-        android:layout_marginLeft="0dp"
         app:layout_constraintLeft_toLeftOf="@+id/p1Lng" />
 
     <TextView
         android:id="@+id/distance"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp"
         android:layout_marginTop="8dp"
         android:text="Distance:"
         app:layout_constraintLeft_toLeftOf="@+id/p1Lat"
@@ -103,13 +103,32 @@
         android:id="@+id/bearing"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp"
         android:layout_marginTop="8dp"
         android:text="Bearing:"
         app:layout_constraintLeft_toLeftOf="@+id/p1Lat"
         app:layout_constraintRight_toRightOf="@+id/p1Lng"
         app:layout_constraintTop_toBottomOf="@+id/distance" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tired Of Typing?"
+        tools:layout_editor_absoluteY="456dp"
+        app:layout_constraintRight_toLeftOf="@+id/button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        tools:layout_editor_absoluteY="437dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginLeft="0dp" />
 
 
 </android.support.constraint.ConstraintLayout>

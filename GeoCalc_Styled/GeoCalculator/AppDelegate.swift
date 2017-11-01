@@ -12,6 +12,10 @@ let BACKGROUND_COLOR = UIColor.init(colorLiteralRed:0.000, green:0.369, blue:0.4
                                     alpha:1.00) // Blueish
 let FOREGROUND_COLOR = UIColor.init(colorLiteralRed: 0.937, green: 0.820,
                                     blue: 0.576, alpha: 1.0)  // Tannish
+let THEME_COLOR2 = UIColor.init(colorLiteralRed: 0.9, green: 0.1,
+                                blue: 0.0, alpha: 1.0)
+let THEME_COLOR3 = UIColor.init(colorLiteralRed: 0.0, green: 0.8,
+                                blue: 0.2, alpha: 1.0)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

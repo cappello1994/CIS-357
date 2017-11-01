@@ -89,7 +89,7 @@ class SettingsViewController: UIViewController {
     */
 
     @IBAction func cancelPressed(_ sender: UIBarButtonItem) {
-        self.dismiss(animated: true, completion: nil)
+        _ = self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func savePressed(_ sender: UIBarButtonItem) {

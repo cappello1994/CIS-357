@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var p1Lat: DecimalMinusTextField!
@@ -129,3 +130,15 @@ extension ViewController : HistoryTableViewControllerDelegate{
         
     }
 }
+
+extension ViewController: LocationSearchDelegate {
+    func set(calculationData: LocationLookup)
+    {
+        self.p1Lat.text = "\(calculationData.origLat)"
+        self.p1Lng.text = "\(calculationData.origLng)"
+        self.p2Lat.text = "\(calculationData.destLat)"
+        self.p2Lng.text = "\(calculationData.destLng)"
+        self.doCalculatations()
+    }
+}
+

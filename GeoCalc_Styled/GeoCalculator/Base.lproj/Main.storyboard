@@ -94,12 +94,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9l-G7-3a4" customClass="GeoCalcButton" customModule="GeoCalculator" customModuleProvider="target">
+                                <rect key="frame" x="124.5" y="629" width="125" height="30"/>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <segue destination="7vj-Ak-hK2" kind="show" identifier="searchSegue" id="06U-q0-lpm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="1dP-E1-yDW" firstAttribute="top" secondItem="yzz-vD-IVS" secondAttribute="bottom" constant="8" id="0LJ-iV-quj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yzz-vD-IVS" secondAttribute="trailing" constant="8" id="D2c-gd-b1W"/>
                             <constraint firstItem="2FP-7k-w4W" firstAttribute="top" secondItem="1dP-E1-yDW" secondAttribute="bottom" constant="8" symbolic="YES" id="FCa-wG-v4C"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="n9l-G7-3a4" secondAttribute="bottom" constant="8" symbolic="YES" id="GCx-vC-PMZ"/>
                             <constraint firstItem="4wJ-LB-b7y" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="8" id="LQj-no-I0E"/>
                             <constraint firstItem="9nL-eN-mWv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Qag-8q-kPy"/>
                             <constraint firstItem="9nL-eN-mWv" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:3" id="Qea-Q4-fkE"/>
@@ -107,8 +115,10 @@
                             <constraint firstItem="yzz-vD-IVS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="Vbj-u9-U8L"/>
                             <constraint firstItem="1dP-E1-yDW" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="cVa-mR-Xne"/>
                             <constraint firstItem="yzz-vD-IVS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="dZb-U3-ZkO"/>
+                            <constraint firstItem="n9l-G7-3a4" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:3" id="dnp-I0-m7P"/>
                             <constraint firstItem="9nL-eN-mWv" firstAttribute="top" secondItem="yzz-vD-IVS" secondAttribute="bottom" constant="8" id="goV-73-xxU"/>
                             <constraint firstItem="4wJ-LB-b7y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="kZx-b9-7AW"/>
+                            <constraint firstItem="n9l-G7-3a4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tpQ-mS-Axi"/>
                             <constraint firstItem="1dP-E1-yDW" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:3" id="uFa-rB-9fi"/>
                             <constraint firstItem="2FP-7k-w4W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="vJT-4v-FCF"/>
                             <constraint firstItem="4wJ-LB-b7y" firstAttribute="top" secondItem="2FP-7k-w4W" secondAttribute="bottom" constant="8" id="zwF-aw-O0u"/>
@@ -228,6 +238,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q4b-NS-5yb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1348" y="895.50224887556226"/>
+        </scene>
+        <!--Location Search View Controller-->
+        <scene sceneID="YDk-3u-7ir">
+            <objects>
+                <viewController id="7vj-Ak-hK2" customClass="LocationSearchViewController" customModule="GeoCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ov3-Rr-7Dk"/>
+                        <viewControllerLayoutGuide type="bottom" id="c54-Sn-Ast"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hsH-sx-drx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Qx-7f-Rt3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2177" y="896"/>
         </scene>
         <!--Settings-->
         <scene sceneID="DNv-8k-rWr">

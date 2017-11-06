@@ -8,6 +8,10 @@
 
 import UIKit
 
+import GooglePlaces
+let GOOGLE_PLACES_API_KEY = "AIzaSyDe6yhf-a-sYvCKyW1b-u-lZqmN0CVwwHI"
+
+
 let BACKGROUND_COLOR = UIColor.init(colorLiteralRed:0.000, green:0.369, blue:0.420,
                                     alpha:1.00) // Blueish
 let FOREGROUND_COLOR = UIColor.init(colorLiteralRed: 0.937, green: 0.820,
@@ -16,7 +20,6 @@ let THEME_COLOR2 = UIColor.init(colorLiteralRed: 0.9, green: 0.1,
                                 blue: 0.0, alpha: 1.0)
 let THEME_COLOR3 = UIColor.init(colorLiteralRed: 0.0, green: 0.8,
                                 blue: 0.2, alpha: 1.0)
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -31,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navAppearance.tintColor = FOREGROUND_COLOR
         navAppearance.isTranslucent = false
         navAppearance.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
-        
+        GMSPlacesClient.provideAPIKey(GOOGLE_PLACES_API_KEY)
         return true
     }
 
